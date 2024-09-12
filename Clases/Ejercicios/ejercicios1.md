@@ -1,7 +1,7 @@
        ___
       {o,o} 
-      /)  )      🦉
-     "  "         **Universidad José Simeón Cañas**
+      /)  )    
+     "  "         ** 🦉 Universidad José Simeón Cañas 🦉**
 
 # 📝 Guía de Ejercicios en C++ - Tipos de Datos
 
