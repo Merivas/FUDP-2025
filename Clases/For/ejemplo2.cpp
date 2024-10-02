@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     int n;  // Variable para almacenar el número ingresado por el usuario
-         esPrimo = true;  // Inicializamos una variable booleana que asume que el número es primo
+    bool esPrimo = true;  // Inicializamos una variable booleana que asume que el número es primo
 
     // Solicitar al usuario que ingrese un número entero
     cout << "Ingresa un número entero: ";
