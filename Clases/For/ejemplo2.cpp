@@ -18,7 +18,9 @@ int main() {
         // Comenzamos desde 2 hasta la raíz cuadrada de n (esto optimiza el programa)
         // Si n tiene un divisor entre 2 y √n, entonces no es primo
         for (int i = 2; i * i <= n; i++) {
-            if (n % i == 0) {  // Si n es divisible por i, entonces no es primo
+            if (
+                
+            ) {  // Si n es divisible por i, entonces no es primo
                 esPrimo = false;  // Marcar el número como no primo
                 break;  // Salir del ciclo porque ya sabemos que no es primo
             }
