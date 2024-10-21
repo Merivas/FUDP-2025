@@ -8,7 +8,7 @@ bool esPar(int n) {
 
 int main() {
     int numero = 10;
-    if (esPar(numero))
+    if (esPar(numero)) 
         cout << numero << " es par." << endl;
     else
         cout << numero << " es impar." << endl;
