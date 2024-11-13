@@ -1,75 +1,126 @@
 #include <iostream>
-#include <cstdlib> // Para srand() y rand()
-#include <ctime>   // Para time()
 using namespace std;
 
 int main()
 {
-    const int FILAS = 5;
-    const int COLUMNAS = 5;
-    int matriz[FILAS][COLUMNAS] = {0}; // Inicializa la matriz con ceros
-
-    // Semilla para el generador de números aleatorios
-    srand(time(0));
-
-    // Colocar el tesoro en una posición aleatoria
-    // Se generan las posiciones aleatorias para el tesoro en la matriz.
-    // 'rand()' genera un número entero aleatorio.
-    // 'FILAS' y 'COLUMNAS' representan las dimensiones de la matriz.
-    // Al aplicar el operador módulo (%) con FILAS y COLUMNAS,
-    // nos aseguramos de que el número generado esté dentro del rango
-    // válido para las filas y columnas de la matriz, es decir, entre 0 y FILAS-1
-    // para la fila y entre 0 y COLUMNAS-1 para la columna.
-    // Esto garantiza que la posición del tesoro esté siempre dentro de la matriz.
-    int tesoroFila = rand() % FILAS;
-    int tesoroColumna = rand() % COLUMNAS;
-    matriz[tesoroFila][tesoroColumna] = 1; // El tesoro está representado por un "1"
-    cout << tesoroFila << endl;
-    cout << tesoroColumna << endl;
-    int intentoFila, intentoColumna;
-    bool encontrado = false;
-
-    cout << "¡Bienvenido a la Búsqueda del Tesoro!" << endl;
-    cout << "Intenta adivinar la posición del tesoro en una matriz de 5x5." << endl;
-
-    // Bucle del juego: el usuario intenta hasta encontrar el tesoro
-    while (!encontrado)
+    double Ingresomensual = 0, descuentoAFP = 0, descuentorenta = 0, netIncome = 0, Reciboelectricidad = 0, Recibodeagua = 0, Recibodeinternet = 0, Recibodegasolina = 0, Gastos = 0, descuentosAFPyRenta = 0, Remaining;
+    cout << "Calculemos tus descuentos y gastos." << endl;
+    cout << "Digite su ingreso mensual:" << endl;
+    cin >> Ingresomensual;
+    if (Ingresomensual < 0)
     {
-        // Mostrar la matriz (sin mostrar el tesoro)
-        cout << "Matriz de juego:" << endl;
-        for (int i = 0; i < FILAS; i++)
+        cout << "Error, el monto ingresado debe ser mayor a cero. Intente denuevo" << endl;
+    }
+    else
+    {
+        (Ingresomensual > 0);
+
+        double calculateAFP(Ingresomensual);
+        if (Ingresomensual < 500)
         {
-            for (int j = 0; j < COLUMNAS; j++)
-            {
-                if (matriz[i][j] == 1)
-                {
-                    cout << "- "; // Ocultar la ubicación del tesoro
-                }
-                else
-                {
-                    cout << "0 "; // Mostrar posiciones vacías
-                }
-            }
-            cout << endl;
+            descuentoAFP = Ingresomensual * 0.05;
+            cout << "Su descuento es: " << descuentoAFP << endl;
         }
-
-        // Pedir al usuario que ingrese una coordenada
-        cout << "Ingresa la fila (0 a 4): ";
-        cin >> intentoFila;
-        cout << "Ingresa la columna (0 a 4): ";
-        cin >> intentoColumna;
-
-        // Verificar si el intento es correcto
-        if (intentoFila == tesoroFila && intentoColumna == tesoroColumna)
+        else if (500 <= Ingresomensual < 1000)
         {
-            cout << "¡Felicidades! Has encontrado el tesoro en (" << intentoFila << ", " << intentoColumna << ")!" << endl;
-            encontrado = true;
+            descuentoAFP = Ingresomensual - 0.07;
+            cout << "Su descuento es: " << descuentoAFP << endl;
         }
         else
         {
-            cout << "No hay nada en esa posición. ¡Intenta de nuevo!" << endl;
+            (Ingresomensual > 1000);
+            descuentoAFP = Ingresomensual - 0.15;
+            cout << "Su descuento es: " << descuentoAFP << endl;
+        }
+
+        double calculateTax(Ingresomensual);
+        if (Ingresomensual < 500)
+        {
+            descuentorenta = Ingresomensual * 0.10;
+            cout << "Su descuento es: " << descuentorenta<< endl;
+        }
+        else if (500 <= Ingresomensual < 1000)
+        {
+            descuentorenta = Ingresomensual - 0.12;
+            cout << "Su descuento es: " << descuentorenta<< endl;
+        }
+        else
+        {
+            (Ingresomensual > 1000);
+            descuentorenta = Ingresomensual - 0.15;
+            cout << "Su descuento es: " << descuentorenta<< endl;
+        }
+
+        descuentosAFPyRenta = descuentoAFP + descuentorenta;
+
+        netIncome = Ingresomensual - (descuentoAFP + descuentorenta);
+
+        double getElectricityBill(Reciboelectricidad);
+        {
+
+            cout << "Ingrese el monto de su recibo de luz:" << endl;
+            cin >> Reciboelectricidad;
+            return 0;
+        }
+        double getWaterBill(Recibodeagua);
+        {
+            cout << "Ingrese el monto de su recibo de agua:" << endl;
+            cin >> Recibodeagua;
+            return 0;
+        }
+
+        double getInternetBill(Recibodeinternet);
+        {
+            cout << "Ingrese el monto de su recibo de internet:" << endl;
+            cin >> Recibodeinternet;
+            return 0;
+        }
+
+        double getGasolineBill(Recibodegasolina);
+        {
+            cout << "Ingrese el monto de su recibo de gasolina:" << endl;
+            cin >> Recibodegasolina;
+            return 0;
+        }
+
+        Remaining = netIncome - Gastos;
+
+        if (Recibodeagua > 0 && Recibodegasolina > 0 && Recibodeinternet > 0 && Reciboelectricidad > 0)
+        {
+
+            Gastos = Recibodeagua + Recibodegasolina + Recibodeinternet + Reciboelectricidad;
+        }
+        bool areExpensesGreaterThanNetIncome(double Gastos, double netIncome);
+        {
+            cout << "Tus gastos son:" << Gastos << endl;
+            if (Gastos > netIncome)
+            {
+                cout << "Tendre que pagar con mi alma la cantidad" << Gastos << "de dinero." << endl;
+            }
+            else if (Gastos <= netIncome)
+            {
+                cout << "Los descuentos son:" << descuentosAFPyRenta << endl;
+                cout << "El ingreso neto es:" << netIncome << endl;
+                cout << "El total de gastos es:" << Gastos << endl;
+                cout << "Saldo Restante:" << Remaining << endl;
+            }
+
+            if (Remaining < 100)
+            {
+                cout << "Con" << Remaining << "de dolares, Dios lo hara abundante" << endl;
+            }
+            else if (Remaining == 100)
+            {
+                cout << "Hoy me voy para Londres." << endl;
+            }
+            else
+            {
+                (Remaining > 100);
+                cout << "Hoy me voy a la luna." << endl;
+            }
+            return 0;
         }
     }
-
     return 0;
 }
+// Me exploto la cabeza en mitad de parcial y no pude terminarlo :c
