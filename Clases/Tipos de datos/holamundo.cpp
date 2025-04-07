@@ -6,7 +6,7 @@ int main() {
    cout << "pruebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" << endl;
    cout << "digite un numero porfavor " << endl;
    cin>>a;
-   cout << "su numero que ingreso es:" + a << endl;
+   cout << "su numero que ingreso es:" << a << endl;
 
     return 0;
 }
