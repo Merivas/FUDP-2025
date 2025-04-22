@@ -19,7 +19,8 @@ else if (numero < 0)
 }
 
 else {
-    cout << " su numero es positivo ";
+    cout << " su numero es positivo asdasdasdasdasdasdas";
+
 }
 
 

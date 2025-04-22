@@ -12,7 +12,7 @@ int main () {
         
         cout << "El area del circulo es:" << resultado << "el resultado es par"<< endl ;
     } else {
-    cout << "el resultado es" << resultado << "es impar"<<endl;
+    cout << "el resultado es" << resultado << "es imparr"<<endl;
     }
 return 0;
 }
