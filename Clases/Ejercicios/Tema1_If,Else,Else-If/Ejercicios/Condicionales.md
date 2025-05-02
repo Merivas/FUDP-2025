@@ -30,7 +30,7 @@
    Un estudiante recibe beca si su promedio es mayor o igual a 85 y tiene menos de 3 faltas.
 
 10. **Calculadora de Tarifa de Envío**  
-    Pide el peso de un paquete y cobra $5 si pesa hasta 5kg, $10 si pesa entre 6kg y 10kg, y $15 si pesa más de 10kg.
+    Pide el peso de un paquete y cobra $5 si pesa hasta 5kg, $10 si pesa entre 6kg y 10kg, y $15 si pesa más de 10kg en adelante.
 
 ## Nivel Difícil
 
@@ -47,7 +47,7 @@
     Pide un año y determina si es bisiesto.
 
 15. **Velocidad y Multa**  
-    Pide la velocidad de un conductor. Si supera los 60 km/h, se le aplica una multa; si supera los 80 km/h, la multa es mayor.
+    Pide la velocidad de un conductor segun el tipo de vehiculo que maneje. Si su vehiculo es una moto y  supera los 60 km/h, se le aplica una multa de 100$; si supera los 80 km/h, la multa es mayor de 1000$ , si su vehiculo es un kiasoul y  supera los 70 km/h, se le aplica una multa de 200$; si supera los 90 km/h, la multa es mayor de 1111$ , si su vehiculo es una 44 toda tuneada y  supera los 80 km/h, se le aplica una multa de 1500$; si supera los 100 km/h, la multa es mayor de 30000$.
 
 16. **Autenticación con Intentos**  
     Simula un sistema de autenticación con un usuario y contraseña, permitiendo hasta 3 intentos.

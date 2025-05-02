@@ -1,18 +1,52 @@
+/*
+    ============================================================================
+    ENUNCIADO DEL PROGRAMA:
+    ----------------------------------------------------------------------------
+    Este programa solicita al usuario que ingrese un número entero y determina
+    si el número ingresado es **positivo**, **negativo** o **cero**.
+
+    El programa utiliza estructuras condicionales `if`, `else if` y `else`
+    para comparar el valor del número e imprimir un mensaje adecuado.
+
+    Objetivos:
+    - Reforzar el uso de condicionales múltiples.
+    - Trabajar con entrada de datos desde teclado.
+    - Desarrollar lógica de control básica.
+
+    Nota: El mensaje para número positivo contiene un texto irrelevante
+    ("asdasdasdasdasdasdas"), se recomienda corregir para mayor claridad.
+
+    Autor: Miguel Rivas
+    ============================================================================
+*/
+
 #include <iostream>
+
 using namespace std;
 
-int main () {
-    int r, pi=3, resultado;
-    cout << "Calcula el area de un circulo."<< endl ;
-    cout << "Ingrese el radio del circulo:" << endl ;
-    cin >> r ;
-    resultado = pi * r * r;
+int main()
+{
+    int number;
 
-    if (resultado%2==0){
-        
-        cout << "El area del circulo es:" << resultado << "el resultado es par"<< endl ;
-    } else {
-    cout << "el resultado es" << resultado << "es impar"<<endl;
+    // Solicita al usuario que ingrese un número
+    cout << "Enter a number: ";
+    cin >> number;
+
+    // Verifica si el número es igual a cero
+    if (number == 0)
+    {
+        cout << "Your number is zero." << endl;
     }
-return 0;
+    // Verifica si el número es negativo
+    else if (number < 0)
+    {
+        cout << "Your number is negative." << endl;
+    }
+    // En caso contrario, el número es positivo
+    else
+    {
+        cout << "Your number is positive." << endl;
+    }
+
+    return 0;
 }
