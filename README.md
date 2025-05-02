@@ -21,7 +21,5 @@ Este repositorio tiene como objetivo centralizar todo el código desarrollado en
 
 ---
 
-## 📂 Estructura del Repositorio
-
 
 
