@@ -1,65 +1,115 @@
+/*
+    ============================================================================
+    PROGRAMA: SISTEMA DE PEDIDOS PARA CAFETERÍA 
+    ----------------------------------------------------------------------------
+    Este programa utiliza códigos numéricos para identificar productos en lugar
+    de almacenar sus nombres como texto.
+    ============================================================================
+*/
+
 #include <iostream>
+#include <iomanip>
+
 using namespace std;
 
 int main() {
-    int choice;
-    double num1, num2, result;
+    int categoria, opcion;
+    float precio = 0.0;
+    const float IVA = 0.13f;
+    int codigo_producto = 0; // Código numérico que identifica el producto
 
-    // Mostrar el menú de opciones
-    cout << "--------------------------------------" << endl;
-    cout << "Calculator Menu" << endl;
-    cout << "--------------------------------------" << endl;
-    cout << "1. Add" << endl;
-    cout << "2. Subtract" << endl;
-    cout << "3. Multiply" << endl;
-    cout << "4. Divide" << endl;
-    cout << "5. Exit" << endl;
-    cout << "Enter your choice (1-5): ";
-    cin >> choice;
+    // Mostrar menú principal
+    cout << "====== Bienvenido a la Cafetería UCA ======" << endl;
+    cout << "Por favor, elija una categoría:" << endl;
+    cout << "1. Bebidas" << endl;
+    cout << "2. Comida" << endl;
+    cout << "Categoría: ";
+    cin >> categoria;
 
-    // Verificar si la opción seleccionada es válida
-    if (choice < 1 || choice > 5) {
-        cout << "Invalid choice. Please select a number between 1 and 5." << endl;
-        return 1; // Salir si la opción es incorrecta
+    // Validar la categoría seleccionada
+    if (categoria != 1 && categoria != 2) {
+        cout << "Categoría no válida." << endl;
+        return 1;
     }
 
-    // Solicitar los números si la opción es válida
-    if (choice != 5) {
-        cout << "Enter the first number: ";
-        cin >> num1;
-        cout << "Enter the second number: ";
-        cin >> num2;
+    // Mostrar menú de productos según la categoría elegida
+    switch (categoria) {
+    case 1: // Bebidas
+        cout << "Elija una bebida:" << endl;
+        cout << "1. Café ($1.50)" << endl;
+        cout << "2. Té ($1.20)" << endl;
+        cout << "3. Jugo natural ($2.00)" << endl;
+        cout << "Opción: ";
+        cin >> opcion;
+
+        if (opcion == 1) {
+            codigo_producto = 101; // Código para Café
+            precio = 1.50f;
+        }
+        else if (opcion == 2) {
+            codigo_producto = 102; // Código para Té
+            precio = 1.20f;
+        }
+        else if (opcion == 3) {
+            codigo_producto = 103; // Código para Jugo natural
+            precio = 2.00f;
+        }
+        else {
+            cout << "Opción de bebida no válida." << endl;
+            return 1;
+        }
+        break;
+
+    case 2: // Comida
+        cout << "Elija un alimento:" << endl;
+        cout << "1. Sandwich de pollo ($2.50)" << endl;
+        cout << "2. Pupusas (3 unidades) ($1.75)" << endl;
+        cout << "3. Empanada ($1.00)" << endl;
+        cout << "Opción: ";
+        cin >> opcion;
+
+        if (opcion == 1) {
+            codigo_producto = 201; // Código para Sandwich de pollo
+            precio = 2.50f;
+        }
+        else if (opcion == 2) {
+            codigo_producto = 202; // Código para Pupusas
+            precio = 1.75f;
+        }
+        else if (opcion == 3) {
+            codigo_producto = 203; // Código para Empanada
+            precio = 1.00f;
+        }
+        else {
+            cout << "Opción de comida no válida." << endl;
+            return 1;
+        }
+        break;
     }
 
-    // Usar el switch para seleccionar la operación
-    switch (choice) {
-        case 1:  // Sumar
-            result = num1 + num2;
-            cout << "Result: " << result << endl;
-            break;
-        case 2:  // Restar
-            result = num1 - num2;
-            cout << "Result: " << result << endl;
-            break;
-        case 3:  // Multiplicar
-            result = num1 * num2;
-            cout << "Result: " << result << endl;
-            break;
-        case 4:  // Dividir
-            if (num2 != 0) {  // Verificar si el divisor no es cero
-                result = num1 / num2;
-                cout << "Result: " << result << endl;
-            } else {
-                cout << "Error! Division by zero." << endl;
-            }
-            break;
-        case 5:  // Salir
-            cout << "Exiting program. Goodbye!" << endl;
-            break;
-        default:
-            cout << "Invalid choice. Please try again." << endl;
-            break;
+    // Calcular IVA y total a pagar
+    float totalIVA = precio * IVA;
+    float totalPagar = precio + totalIVA;
+
+    // Mostrar resumen del pedido
+    cout << fixed << setprecision(2);
+    cout << "\nResumen del pedido:" << endl;
+    
+    // Mostrar el nombre del producto basado en el código
+    cout << "Producto seleccionado: ";
+    switch (codigo_producto) {
+        case 101: cout << "Café"; break;
+        case 102: cout << "Té"; break;
+        case 103: cout << "Jugo natural"; break;
+        case 201: cout << "Sandwich de pollo"; break;
+        case 202: cout << "Pupusas"; break;
+        case 203: cout << "Empanada"; break;
     }
+    
+    cout << endl;
+    cout << "Precio base: $" << precio << endl;
+    cout << "IVA (13%): $" << totalIVA << endl;
+    cout << "Total a pagar: $" << totalPagar << endl;
 
     return 0;
 }

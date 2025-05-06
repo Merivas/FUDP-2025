@@ -5,7 +5,6 @@ int main()
 {
     int res, n;
     cout << "hola, podrias ingresar un numero entero";
-
     cin >> n;
     res = n % 2;
     switch (res)
