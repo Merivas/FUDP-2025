@@ -28,7 +28,7 @@ int main()
             if (n % i == 0)
             {                    // Si n es divisible por i, entonces no es primo
                 esPrimo = false; // Marcar el número como no primo
-                break;           // Salir del ciclo porque ya sabemos que no es primo
+                         // Salir del ciclo porque ya sabemos que no es primo
             }
         }
     }

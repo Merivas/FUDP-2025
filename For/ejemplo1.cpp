@@ -2,9 +2,11 @@
 using namespace std;
 
 int main() {
-    int n=0, i=0;
-    cout<<i<<endl;
-    for (int i = 1; i <= 1000; i++) {
+    int n=0, a;
+    
+    cout<<"podrias ingresar un numero que sera tu limite";
+   cin >> a;
+    for (int i = 1; i <= a; i++) {
         // Imprimir el valor actual de i
         cout << i << " ";
     }
