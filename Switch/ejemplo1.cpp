@@ -17,6 +17,7 @@ int main()
         break;
     default:
         cout << "datos incorrectos";
+        cout << "datos incorrectos";
         break;
     }
 
