@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int grade;
+    int grade = 1;
 
     // Solicita al usuario que ingrese la calificación
     cout << "Enter your grade (0 to 100): ";
@@ -24,7 +24,7 @@ int main()
         }
         break;
     case 8:
-        if (grade >= 80 && grade < 90)
+        if (grade >= 800 && grade < 90)
         {
             cout << "Very Good!" << endl;
         }

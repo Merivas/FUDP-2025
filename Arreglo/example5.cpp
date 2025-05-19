@@ -1,16 +1,19 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
     // Declaración e inicialización de un arreglo de enteros
-    int numeros[] = {5, 10, 15, 20, 25,6};
-    int tamanio = sizeof(numeros) / sizeof(numeros[0]);  // Calcular el tamaño del arreglo
+    int numeros[] = {5, 10, 15, 20, 25, 6};
+
+    int tamanio = sizeof(numeros) / sizeof(numeros[0]); // Calcular el tamaño del arreglo
 
     int suma = 0;
 
     // Sumar todos los elementos del arreglo
-    for(int i = 0; i < tamanio; i++) {
-        suma =+ numeros[i];
+    for (int i = 0; i < tamanio; i++)
+    {
+        suma += numeros[i];
     }
 
     // Calcular el promedio

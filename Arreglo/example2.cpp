@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-    int numeros[5]; // Declaración del arreglo
-
+    int numeros[5],n; // Declaración del arreglo
+    cout << "digite el numero del tamano del arreglo:" << endl;
     // Pedir al usuario que ingrese valores
     cout << "Ingrese 5 números:" << endl;
     for(int i = 0; i < 5; i++) {
@@ -18,4 +18,5 @@ int main() {
     }
 
     return 0;
+
 }
