@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     int contador ;
-    cin >> contador ;
+    cin >> contador ; //1
     // Ciclo while
     while (contador <= 5) {
         cout << "Contador en while: " << contador << endl;

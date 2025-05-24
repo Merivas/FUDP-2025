@@ -11,7 +11,6 @@ int main() {
             maximo = numeros[i]; // Actualizar el valor máximo
         }
     }
-
     // Mostrar el valor máximo
     cout << "El valor máximo es: " << maximo << endl;
 
