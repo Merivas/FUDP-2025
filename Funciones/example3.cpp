@@ -11,8 +11,15 @@ int mayorDeTres(int a, int b, int c) {
         return c;
 }
 
+bool esPar(int n) {
+    return n % 2 == 0;
+}
+    
+
+
+
 int main() {
-    int x = 3, y = 9, z = 5;
-    cout << "El mayor de los tres es: " << mayorDeTres(x, y, z) << endl;
+    int a = 3, b = 9, c = 5;
+    cout << "El mayor de los tres es: " << mayorDeTres(a, b, c) << endl;
     return 0;
 }
