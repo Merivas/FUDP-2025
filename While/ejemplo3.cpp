@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int numeroSecreto = 42;  // El número que debe adivinar el usuario
+        int numeroSecreto = 42;  // El número que debe adivinar el usuario
     int intento;
     
     cout << "¡Adivina el número secreto!" << endl;

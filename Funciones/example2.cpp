@@ -7,7 +7,7 @@ bool esPar(int n) {
 }
 
 int main() {
-    int numero = 3;
+    int numero = 42;
     if (esPar(numero)) 
         cout << numero << " es par." << endl;
     else
