@@ -7,7 +7,7 @@ int main() {
     cout<<"podrias ingresar un numero que sera tu limite";
    cin >> a;
     for (int i = 1; i <= a; i++) {
-        // Imprimir el valor actual de i
+        // Imprimir el valor actucoual de i
         cout << i << " ";
     }
 
