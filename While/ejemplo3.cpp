@@ -10,6 +10,8 @@ int main() {
 
     // Ciclo while para continuar hasta que el usuario adivine correctamente
     cin >> intento;
+
+    
     while (intento != numeroSecreto) {
         if (intento > numeroSecreto) {
             cout << "El número es demasiado alto. Inténtalo de nuevo: ";

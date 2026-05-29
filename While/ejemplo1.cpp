@@ -2,11 +2,12 @@
 using namespace std;
 
 int main() {
-    int contador ;
+    int contador,n ;
     cout << "Ingrese un número para iniciar el contador: ";
-    cin >> contador ; //1
+    cin >> contador ; 
+    cin >> n;
     // Ciclo while
-    while (contador <= 5) {
+    while (contador <= n) {
         cout << "Contador en while: " << contador << endl;
         contador++; // Incrementa el contador
     }
